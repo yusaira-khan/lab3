@@ -1,0 +1,22 @@
+library ieee; -- allows use of the std_logic_vector type 
+use ieee.std_logic_1164.all; 
+entity allseg is
+port( code : in std_logic_vector(3 downto 0);
+RippleBlank_In:in std_logic;
+RippleBlank_Out:out std_logic;
+segments : out std_logic_vector(6 downto 0));
+end allseg;
+architecture arch of allseg is
+component g24_7_segment_decoder is
+port( code : in std_logic_vector(3 downto 0);
+RippleBlank_In:in std_logic;
+RippleBlank_Out:out std_logic;
+segments : out std_logic_vector(6 downto 0));
+end component;
+	signal inputs :std_logic_vector(4 downto 0);
+	signal outs :std_logic_vector(7 downto 0);
+	begin
+
+	
+
+end architecture ; -- arch
