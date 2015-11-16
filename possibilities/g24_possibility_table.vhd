@@ -13,7 +13,7 @@ end g24_possibility_table;
 
 -- Arcitecture Block
 architecture behavior of g24_possibility_table is
-	
+	signal Table_Memory : std_logic_vector(4095 to 0);
 	-- Declare needed signals
 	signal TC 		 	: std_logic_vector(11 downto 0);
 	signal pin_index 	: std_logic_vector(1 downto 0);
@@ -34,8 +34,7 @@ architecture behavior of g24_possibility_table is
 	
 	-- Declare componenet
 	component color_counter is
-		port (	present_color	: in std_logic_vector(2 downto 0);
-				clock 			: in std_logic;
+		port (clock 			: in std_logic;
 				reset			: in std_logic;
 				enable			: in std_logic;
 				last_reached	: out std_logic;
@@ -60,10 +59,12 @@ begin
 	EN1 <= LR0 AND TC_EN;
 	EN2 <= LR1 AND TC_EN;
 	EN3 <= LR2 AND TC_EN;
+	TM_ADDR <= TC;
+	Table_Memory <= (others=>'0');
+	
 	
 	-- Declare our needed instances of color counters
-	color_counter0 : color_counter port map(
-		present_color 	=> TC0, 
+	color_counter0 : color_counter port map( 
 		clock 			=> CLK,
 		reset 			=> TC_RST,
 		enable 			=> EN0,
@@ -71,7 +72,6 @@ begin
 		next_color		=> TC0
 	);
 	color_counter1 : color_counter port map(
-		present_color 	=> TC1, 
 		clock 			=> CLK,
 		reset 			=> TC_RST,
 		enable 			=> EN1,
@@ -79,7 +79,6 @@ begin
 		next_color		=> TC1
 	);
 	color_counter2 : color_counter port map(
-		present_color 	=> TC2, 
 		clock 			=> CLK,
 		reset 			=> TC_RST,
 		enable 			=> EN2,
@@ -87,7 +86,6 @@ begin
 		next_color		=> TC2
 	);
 	color_counter3 : color_counter port map(
-		present_color 	=> TC3, 
 		clock 			=> CLK,
 		reset 			=> TC_RST,
 		enable 			=> EN3,

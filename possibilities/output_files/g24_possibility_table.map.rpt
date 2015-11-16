@@ -1,5 +1,5 @@
 Analysis & Synthesis report for g24_possibility_table
-Mon Nov 16 13:55:16 2015
+Mon Nov 16 14:43:19 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -41,7 +41,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 16 13:55:16 2015            ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 16 14:43:19 2015            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; g24_possibility_table                            ;
 ; Top-level Entity Name              ; g24_possibility_table                            ;
@@ -195,8 +195,8 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; CLK   ;
 ; Maximum fan-out                             ; 16    ;
-; Total fan-out                               ; 125   ;
-; Average fan-out                             ; 2.23  ;
+; Total fan-out                               ; 137   ;
+; Average fan-out                             ; 2.45  ;
 +---------------------------------------------+-------+
 
 
@@ -234,7 +234,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -244,7 +244,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Nov 16 13:55:11 2015
+    Info: Processing started: Mon Nov 16 14:43:12 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off g24_possibility_table -c g24_possibility_table
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file g24_possibility_table.vhd
@@ -254,23 +254,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file color_c
     Info (12022): Found design unit 1: color_counter-behavior
     Info (12023): Found entity 1: color_counter
 Info (12127): Elaborating entity "g24_possibility_table" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at g24_possibility_table.vhd(10): used implicit default value for signal "TM_ADDR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10445): VHDL Subtype or Type Declaration warning at g24_possibility_table.vhd(16): subtype or type has null range
 Warning (10541): VHDL Signal Declaration warning at g24_possibility_table.vhd(11): used implicit default value for signal "TM_OUT" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at g24_possibility_table.vhd(18): object "TC" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at g24_possibility_table.vhd(16): object "Table_Memory" assigned a value but never read
+Warning (10296): VHDL warning at g24_possibility_table.vhd(63): ignored assignment of value to null range
 Info (12128): Elaborating entity "color_counter" for hierarchy "color_counter:color_counter0"
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "TM_ADDR[0]" is stuck at GND
-    Warning (13410): Pin "TM_ADDR[1]" is stuck at GND
-    Warning (13410): Pin "TM_ADDR[2]" is stuck at GND
-    Warning (13410): Pin "TM_ADDR[3]" is stuck at GND
-    Warning (13410): Pin "TM_ADDR[4]" is stuck at GND
-    Warning (13410): Pin "TM_ADDR[5]" is stuck at GND
-    Warning (13410): Pin "TM_ADDR[6]" is stuck at GND
-    Warning (13410): Pin "TM_ADDR[7]" is stuck at GND
-    Warning (13410): Pin "TM_ADDR[8]" is stuck at GND
-    Warning (13410): Pin "TM_ADDR[9]" is stuck at GND
-    Warning (13410): Pin "TM_ADDR[10]" is stuck at GND
-    Warning (13410): Pin "TM_ADDR[11]" is stuck at GND
     Warning (13410): Pin "TM_OUT" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -281,10 +270,10 @@ Info (21057): Implemented 40 device resources after synthesis - the final resour
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 14 output pins
     Info (21061): Implemented 21 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 20 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 9 warnings
     Info: Peak virtual memory: 499 megabytes
-    Info: Processing ended: Mon Nov 16 13:55:16 2015
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Processing ended: Mon Nov 16 14:43:19 2015
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:02
 
 
