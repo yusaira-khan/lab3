@@ -13,9 +13,13 @@ end color_counter;
 
 -- Initialize behavior
 architecture behavior of color_counter is
+	
 	signal color : std_logic_vector(2 downto 0);
-begin
-		next_color<=color;
+
+	begin
+	
+	next_color <= color;
+	
 	-- Initialie process
 	process(clock, reset, enable)
 	begin
@@ -25,15 +29,15 @@ begin
 			color <= "000";
 		
 		-- Otherwise we change on the rising edge the output to the next value
-		elsif rising_edge(clock)  then
+		elsif rising_edge(clock) then
 			if enable = '1' and reset = '0' then
 				case color is
-					when "000" => color <= "001";
-					when "001" => color <= "010";
-					when "010" => color <= "011";
-					when "011" => color <= "100";
-					when "100" => color <= "101";
-					when "101" => color <= "000";
+					when "000" 	=> color <= "001";
+					when "001" 	=> color <= "010";
+					when "010" 	=> color <= "011";
+					when "011" 	=> color <= "100";
+					when "100" 	=> color <= "101";
+					when "101" 	=> color <= "000";
 					when others => color <= "000";
 				end case;
 			
@@ -42,8 +46,9 @@ begin
 					last_reached <= '1';
 				else
 					last_reached <= '0';
+				end if;
+			
 			end if;
-		end if;
 		end if;
 	end process;
 end architecture;
