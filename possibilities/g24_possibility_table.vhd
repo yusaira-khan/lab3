@@ -1,5 +1,6 @@
 library ieee; -- allows use of the std_logic_vector type 
 use ieee.std_logic_1164.all; 
+use ieee.numeric_std.all; 
 entity g24_possibility_table is
 	port (	TC_EN 	: in std_logic; -- table counter enable
 		  	TC_RST 	: in std_logic; -- table counter reset
@@ -30,6 +31,10 @@ architecture behavior of g24_possibility_table is
 	signal EN1 			: std_logic;
 	signal EN2 			: std_logic;
 	signal EN3 			: std_logic;
+	signal RS0 			: std_logic;
+	signal RS1 			: std_logic;
+	signal RS3 			: std_logic;
+	signal RS2 			: std_logic;
 	signal last_reached	: std_logic;
 	
 	-- Declare componenet
@@ -49,13 +54,16 @@ begin
 	TC(8 downto 6) 	<= TC2;
 	TC(11 downto 9) <= TC3;
 	EN0 			<= Not(last_reached) AND TC_EN;
-	last_reached	<= LR3 AND LR2 AND LR1 AND LR0;
+	RS0 <= EN1 OR TC_RST;
+	RS1 <= EN2 OR TC_RST;
+	RS2 <= EN3 OR TC_RST;
+	RS3 <= TC_RST;
+
 	TC_LAST			<= last_reached;
 	EN1				<= LR0 AND TC_EN;
 	EN2 			<= LR1 AND TC_EN;
 	EN3 			<= LR2 AND TC_EN;
 	TM_ADDR 		<= TC;
-	table_memory 	<= (others => '0');
 	
 	-- Declare our needed instances of color counters
 	color_counter0 : color_counter port map( 
@@ -86,15 +94,21 @@ begin
 		last_reached	=> LR3,
 		next_color		=> TC3
 	);
-	
+	with TC  select
+		last_reached	<= '1' when  "101101101101" ,
+		'0' when others;
+				
 	-- We need process logic for reading and writing
-	process(TM_EN, TM_IN, TC)
+	process(TM_EN, TM_IN, TC,TC_RST,CLK)
 	begin
 		
-		if TC_RST = "1" then;
+		if TC_RST = '0' then TM_OUT <= '0';
 		
 		elsif rising_edge(CLK) then
-			if TM_EN = "0" then
+			
+				
+			
+			if TM_EN = '0' then
 				-- Read logic
 				TM_OUT <= table_memory(to_integer(unsigned(TC)));
 			else
