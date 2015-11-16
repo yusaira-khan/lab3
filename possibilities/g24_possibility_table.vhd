@@ -25,7 +25,12 @@ architecture behavior of g24_possibility_table is
 	signal LR2 			: std_logic;
 	signal TC3 			: std_logic_vector(2 downto 0);
 	signal LR3 			: std_logic;
-	signal enable_add	: std_logic;
+	signal EN0 			: std_logic;
+	signal EN1 			: std_logic;
+	signal EN2 			: std_logic;
+	signal EN3 			: std_logic;
+	--signal enable_add	: std_logic;
+	signal last_reached	: std_logic;
 	
 	-- Declare componenet
 	component color_counter is
@@ -40,23 +45,28 @@ architecture behavior of g24_possibility_table is
 begin
 	
 	-- Local instances
-	TC <= "000000000000";
-	TC0 <= TC(2 downto 0);
-	LR0 <= '0';
-	TC1 <= TC(5 downto 3);
-	LR1 <= '0';
-	TC2 <= TC(8 downto 6);
-	LR2 <= '0';
-	TC3 <= TC(11 downto 9);
-	LR3 <= '0';
-	enable_add <= LR3 AND TC_EN;
+	---TC <= "000000000000";
+	TC(2 downto 0)<=TC0 ;
+	--LR0 <= '0';
+	TC(5 downto 3)<=TC1  ;
+	--LR1 <= '0';
+	TC(8 downto 6) <= TC2;
+	--LR2 <= '0';
+	TC(11 downto 9) <= TC3;
+	--LR3 <= '0';
+	EN0 <= Not(last_reached) AND TC_EN;
+	last_reached<= LR3 AND LR2 AND LR1 AND LR0;
+	TC_LAST<=last_reached;
+	EN1 <= LR0 AND TC_EN;
+	EN2 <= LR1 AND TC_EN;
+	EN3 <= LR2 AND TC_EN;
 	
 	-- Declare our needed instances of color counters
 	color_counter0 : color_counter port map(
 		present_color 	=> TC0, 
 		clock 			=> CLK,
 		reset 			=> TC_RST,
-		enable 			=> enable_add,
+		enable 			=> EN0,
 		last_reached	=> LR0,
 		next_color		=> TC0
 	);
@@ -64,7 +74,7 @@ begin
 		present_color 	=> TC1, 
 		clock 			=> CLK,
 		reset 			=> TC_RST,
-		enable 			=> LR0,
+		enable 			=> EN1,
 		last_reached	=> LR1,
 		next_color		=> TC1
 	);
@@ -72,7 +82,7 @@ begin
 		present_color 	=> TC2, 
 		clock 			=> CLK,
 		reset 			=> TC_RST,
-		enable 			=> LR1,
+		enable 			=> EN2,
 		last_reached	=> LR2,
 		next_color		=> TC2
 	);
@@ -80,18 +90,18 @@ begin
 		present_color 	=> TC3, 
 		clock 			=> CLK,
 		reset 			=> TC_RST,
-		enable 			=> LR2,
+		enable 			=> EN3,
 		last_reached	=> LR3,
 		next_color		=> TC3
 	);
 	
 	-- Start the logic process to cascade our 4 individual counters
-	process(TC_RST, TC_EN, CLK, TC)
-	begin
+	--process(TC_RST, TC_EN, CLK, TC)
+	--begin
 		
-		TC <= TC0 & TC1 & TC2 & TC3;
+		--TC <= TC0 & TC1 & TC2 & TC3;
 		
-	end process;
+	--end process;
 
 	
 	

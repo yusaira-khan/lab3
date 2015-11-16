@@ -33,7 +33,7 @@ begin
 					when "010" => next_color <= "011";
 					when "011" => next_color <= "100";
 					when "100" => next_color <= "101";
-					when "101" => next_color <= "000";
+					when others => next_color <= "000";---when "101" => next_color <= "000";
 				end case;
 			
 			
