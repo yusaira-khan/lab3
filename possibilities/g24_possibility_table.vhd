@@ -91,12 +91,16 @@ begin
 	process(TM_EN, TM_IN, TC)
 	begin
 		
-		if TM_EN = "0" then
-			-- Read logic
-			TM_OUT <= table_memory(to_integer(unsigned(TC)));
-		else
-			-- Write logic
-			table_memory(to_integer(unsigned(TC))) <= TM_IN;
+		if TC_RST = "1" then;
+		
+		elsif rising_edge(CLK) then
+			if TM_EN = "0" then
+				-- Read logic
+				TM_OUT <= table_memory(to_integer(unsigned(TC)));
+			else
+				-- Write logic
+				table_memory(to_integer(unsigned(TC))) <= TM_IN;
+			end if;
 		end if;
 			
 	end process;
