@@ -1,4 +1,6 @@
 -- Here we define our color_counter that acts like a counter except it returns to zero and sets last_reached = 1 on 6 instead of 8 (ie, 101 instead of 111)
+
+-- DO NOT NEED INPUT VECTOR!!!
 entity color_counter is
 	port (	present_color	: in std_logic_vector(2 downto 0);
 			clock 			: in std_logic;
