@@ -1,0 +1,102 @@
+|scan_test
+
+
+|scan_test|g24_possibility_table:b2v_inst
+TC_EN => EN0.IN1
+TC_EN => EN1.IN1
+TC_EN => EN2.IN1
+TC_EN => EN3.IN1
+TC_RST => color_counter:color_counter0.reset
+TC_RST => color_counter:color_counter1.reset
+TC_RST => color_counter:color_counter2.reset
+TC_RST => color_counter:color_counter3.reset
+TM_IN => ~NO_FANOUT~
+TM_EN => ~NO_FANOUT~
+CLK => color_counter:color_counter0.clock
+CLK => color_counter:color_counter1.clock
+CLK => color_counter:color_counter2.clock
+CLK => color_counter:color_counter3.clock
+TC_LAST <= last_reached.DB_MAX_OUTPUT_PORT_TYPE
+TM_ADDR[0] <= color_counter:color_counter0.next_color[0]
+TM_ADDR[1] <= color_counter:color_counter0.next_color[1]
+TM_ADDR[2] <= color_counter:color_counter0.next_color[2]
+TM_ADDR[3] <= color_counter:color_counter1.next_color[0]
+TM_ADDR[4] <= color_counter:color_counter1.next_color[1]
+TM_ADDR[5] <= color_counter:color_counter1.next_color[2]
+TM_ADDR[6] <= color_counter:color_counter2.next_color[0]
+TM_ADDR[7] <= color_counter:color_counter2.next_color[1]
+TM_ADDR[8] <= color_counter:color_counter2.next_color[2]
+TM_ADDR[9] <= color_counter:color_counter3.next_color[0]
+TM_ADDR[10] <= color_counter:color_counter3.next_color[1]
+TM_ADDR[11] <= color_counter:color_counter3.next_color[2]
+TM_OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|scan_test|g24_possibility_table:b2v_inst|color_counter:color_counter0
+clock => last_reached~reg0.CLK
+clock => color[0].CLK
+clock => color[1].CLK
+clock => color[2].CLK
+reset => color[0].ACLR
+reset => color[1].ACLR
+reset => color[2].ACLR
+reset => process_0.IN0
+reset => last_reached~reg0.ENA
+enable => process_0.IN1
+last_reached <= last_reached~reg0.DB_MAX_OUTPUT_PORT_TYPE
+next_color[0] <= color[0].DB_MAX_OUTPUT_PORT_TYPE
+next_color[1] <= color[1].DB_MAX_OUTPUT_PORT_TYPE
+next_color[2] <= color[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|scan_test|g24_possibility_table:b2v_inst|color_counter:color_counter1
+clock => last_reached~reg0.CLK
+clock => color[0].CLK
+clock => color[1].CLK
+clock => color[2].CLK
+reset => color[0].ACLR
+reset => color[1].ACLR
+reset => color[2].ACLR
+reset => process_0.IN0
+reset => last_reached~reg0.ENA
+enable => process_0.IN1
+last_reached <= last_reached~reg0.DB_MAX_OUTPUT_PORT_TYPE
+next_color[0] <= color[0].DB_MAX_OUTPUT_PORT_TYPE
+next_color[1] <= color[1].DB_MAX_OUTPUT_PORT_TYPE
+next_color[2] <= color[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|scan_test|g24_possibility_table:b2v_inst|color_counter:color_counter2
+clock => last_reached~reg0.CLK
+clock => color[0].CLK
+clock => color[1].CLK
+clock => color[2].CLK
+reset => color[0].ACLR
+reset => color[1].ACLR
+reset => color[2].ACLR
+reset => process_0.IN0
+reset => last_reached~reg0.ENA
+enable => process_0.IN1
+last_reached <= last_reached~reg0.DB_MAX_OUTPUT_PORT_TYPE
+next_color[0] <= color[0].DB_MAX_OUTPUT_PORT_TYPE
+next_color[1] <= color[1].DB_MAX_OUTPUT_PORT_TYPE
+next_color[2] <= color[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|scan_test|g24_possibility_table:b2v_inst|color_counter:color_counter3
+clock => last_reached~reg0.CLK
+clock => color[0].CLK
+clock => color[1].CLK
+clock => color[2].CLK
+reset => color[0].ACLR
+reset => color[1].ACLR
+reset => color[2].ACLR
+reset => process_0.IN0
+reset => last_reached~reg0.ENA
+enable => process_0.IN1
+last_reached <= last_reached~reg0.DB_MAX_OUTPUT_PORT_TYPE
+next_color[0] <= color[0].DB_MAX_OUTPUT_PORT_TYPE
+next_color[1] <= color[1].DB_MAX_OUTPUT_PORT_TYPE
+next_color[2] <= color[2].DB_MAX_OUTPUT_PORT_TYPE
+
+

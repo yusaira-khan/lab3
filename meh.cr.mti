@@ -1,0 +1,27 @@
+P:/323/lab3/scan_test/scan_test.vht {1 {vcom -work work -2002 -explicit P:/323/lab3/scan_test/scan_test.vht
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity scan_test
+-- Compiling architecture bdf_type of scan_test
+
+} {} {}} P:/323/lab3/possibilities/g24_possibility_table.vhd {1 {vcom -work work -2002 -explicit P:/323/lab3/possibilities/g24_possibility_table.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity g24_possibility_table
+-- Compiling architecture behavior of g24_possibility_table
+
+} {} {}} P:/323/lab3/possibilities/color_counter.vhd {1 {vcom -work work -2002 -explicit P:/323/lab3/possibilities/color_counter.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity color_counter
+-- Compiling architecture behavior of color_counter
+
+} {} {}}

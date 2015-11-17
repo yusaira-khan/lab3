@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Mon Nov 16 14:43:19 2015
+Analysis & Synthesis Status : Successful - Mon Nov 16 18:11:38 2015
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : g24_possibility_table
 Top-level Entity Name : g24_possibility_table
 Family : Cyclone II
-Total logic elements : 21
-    Total combinational functions : 21
-    Dedicated logic registers : 16
-Total registers : 16
+Total logic elements : 23
+    Total combinational functions : 23
+    Dedicated logic registers : 13
+Total registers : 13
 Total pins : 19
 Total virtual pins : 0
-Total memory bits : 0
+Total memory bits : 4,096
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0
