@@ -58,3 +58,4 @@ architecture behavior of color_counter is
 	
 	
 end architecture;
+

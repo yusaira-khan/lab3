@@ -36,6 +36,7 @@ architecture behavior of g24_possibility_table is
 	signal RS3 			: std_logic;
 	signal RS2 			: std_logic;
 	signal last_reached	: std_logic;
+	signal last_reache	: std_logic;
 	
 	-- Declare componenet
 	component color_counter is
@@ -102,15 +103,13 @@ begin
 	process(TM_EN, TM_IN, TC,TC_RST,CLK)
 	begin
 		
-		if TC_RST = '0' then TM_OUT <= '0';
+		--if TC_RST = '0' then TC <= "000000000000";
 		
-		elsif rising_edge(CLK) then
-			
-				
-			
+		if rising_edge(CLK) then
 			if TM_EN = '0' then
 				-- Read logic
 				TM_OUT <= table_memory(to_integer(unsigned(TC)));
+				--TM_OUT<=TM_IN;
 			else
 				-- Write logic
 				table_memory(to_integer(unsigned(TC))) <= TM_IN;

@@ -22,10 +22,16 @@ COMPONENT g24_possibility_table is
 END COMPONENT;
 signal enable :std_logic_vector(1 downto 0);
 signal reset :std_logic_vector(1 downto 0);
-signal empty :std_logic;
+
 signal zero :std_logic;
 signal last :std_logic;
 signal clk : std_logic := '0';
+signal TM_IN :std_logic;
+
+signal TM_EN :std_logic;
+signal TM_OUT :std_logic;
+
+
 signal TC :  std_logic_vector(11 downto 0);
 
 BEGIN 
@@ -37,23 +43,47 @@ clk<= not clk after 20 ns;
 bleh : g24_possibility_table
 PORT MAP(TC_EN => enable(0),
 		 TC_RST => reset(0),
-		 TM_IN => zero,
-		 TM_EN => zero,
+		 TM_IN => TM_IN,
+		 TM_EN => TM_EN,
 		 CLK 	=>clk ,
 		 TC_LAST=>last,
 		 TM_ADDR => TC,
-		 TM_OUT=>empty
+		 TM_OUT=>TM_OUT
 		 );
 generate_test : PROCESS                                               
 BEGIN                                                          
     reset<="11";
 	enable<="00";
-    WAIT For 100 ns ;
+	WAIT For 100 ns ;
 	reset<="00";
+	enable<="11";
+	TM_IN 	<='1';
+	TM_EN<='1';
+
+	WAIT For 50000 ns ;
+	reset<="11";
 	enable<="00";
 	WAIT For 100 ns ;
 	reset<="00";
 	enable<="11";
+	TM_EN<='0';
+	WAIT For 50000 ns ;
+	reset<="11";
+	enable<="00";
+	WAIT For 100 ns ;
+	reset<="00";
+	enable<="11";
+	TM_IN 	<='0';
+	TM_EN<='1';
+
+	WAIT For 50000 ns ;
+	reset<="11";
+	enable<="00";
+	WAIT For 100 ns ;
+	reset<="00";
+	enable<="11";
+	TM_EN<='0';
+	WAIT For 50000 ns ;
 	WAIT;
 
 	
