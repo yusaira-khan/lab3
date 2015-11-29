@@ -1,5 +1,5 @@
 Analysis & Synthesis report for g24_possibility_table
-Mon Nov 16 18:11:38 2015
+Sun Nov 29 01:28:46 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -14,11 +14,11 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. General Register Statistics
- 10. Registers Packed Into Inferred Megafunctions
- 11. Source assignments for altsyncram:table_memory_rtl_0|altsyncram_2rd1:auto_generated
- 12. Source assignments for altsyncram:table_memory_rtl_0|altsyncram_2rd1:auto_generated|altsyncram_4eh1:altsyncram1
- 13. Parameter Settings for Inferred Entity Instance: altsyncram:table_memory_rtl_0
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Source assignments for altsyncram:table_memory[0]__1|altsyncram_2rd1:auto_generated
+ 12. Source assignments for altsyncram:table_memory[0]__1|altsyncram_2rd1:auto_generated|altsyncram_4eh1:altsyncram1
+ 13. Parameter Settings for User Entity Instance: altsyncram:table_memory[0]__1
  14. altsyncram Parameter Settings by Entity Instance
  15. Port Connectivity Checks: "color_counter:color_counter3"
  16. Elapsed Time Per Partition
@@ -48,15 +48,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 16 18:11:38 2015            ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 29 01:28:46 2015            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; g24_possibility_table                            ;
 ; Top-level Entity Name              ; g24_possibility_table                            ;
 ; Family                             ; Cyclone II                                       ;
-; Total logic elements               ; 23                                               ;
-;     Total combinational functions  ; 23                                               ;
-;     Dedicated logic registers      ; 13                                               ;
-; Total registers                    ; 13                                               ;
+; Total logic elements               ; 22                                               ;
+;     Total combinational functions  ; 22                                               ;
+;     Dedicated logic registers      ; 12                                               ;
+; Total registers                    ; 12                                               ;
 ; Total pins                         ; 19                                               ;
 ; Total virtual pins                 ; 0                                                ;
 ; Total memory bits                  ; 4,096                                            ;
@@ -193,29 +193,29 @@ applicable agreement for further details.
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 23     ;
+; Estimated Total logic elements              ; 22     ;
 ;                                             ;        ;
-; Total combinational functions               ; 23     ;
+; Total combinational functions               ; 22     ;
 ; Logic element usage by number of LUT inputs ;        ;
 ;     -- 4 input functions                    ; 6      ;
-;     -- 3 input functions                    ; 14     ;
-;     -- <=2 input functions                  ; 3      ;
+;     -- 3 input functions                    ; 15     ;
+;     -- <=2 input functions                  ; 1      ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 23     ;
+;     -- normal mode                          ; 22     ;
 ;     -- arithmetic mode                      ; 0      ;
 ;                                             ;        ;
-; Total registers                             ; 13     ;
-;     -- Dedicated logic registers            ; 13     ;
+; Total registers                             ; 12     ;
+;     -- Dedicated logic registers            ; 12     ;
 ;     -- I/O registers                        ; 0      ;
 ;                                             ;        ;
 ; I/O pins                                    ; 19     ;
 ; Total memory bits                           ; 4096   ;
 ; Embedded Multiplier 9-bit elements          ; 0      ;
 ; Maximum fan-out node                        ; TC_RST ;
-; Maximum fan-out                             ; 17     ;
-; Total fan-out                               ; 153    ;
-; Average fan-out                             ; 2.73   ;
+; Maximum fan-out                             ; 15     ;
+; Total fan-out                               ; 148    ;
+; Average fan-out                             ; 2.74   ;
 +---------------------------------------------+--------+
 
 
@@ -224,10 +224,10 @@ applicable agreement for further details.
 +----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                             ; Library Name ;
 +----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------+--------------+
-; |g24_possibility_table                 ; 23 (6)            ; 13 (1)       ; 4096        ; 0            ; 0       ; 0         ; 19   ; 0            ; |g24_possibility_table                                                                                          ; work         ;
-;    |altsyncram:table_memory_rtl_0|     ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g24_possibility_table|altsyncram:table_memory_rtl_0                                                            ; work         ;
-;       |altsyncram_2rd1:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g24_possibility_table|altsyncram:table_memory_rtl_0|altsyncram_2rd1:auto_generated                             ; work         ;
-;          |altsyncram_4eh1:altsyncram1| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g24_possibility_table|altsyncram:table_memory_rtl_0|altsyncram_2rd1:auto_generated|altsyncram_4eh1:altsyncram1 ; work         ;
+; |g24_possibility_table                 ; 22 (5)            ; 12 (0)       ; 4096        ; 0            ; 0       ; 0         ; 19   ; 0            ; |g24_possibility_table                                                                                          ; work         ;
+;    |altsyncram:table_memory[0]__1|     ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g24_possibility_table|altsyncram:table_memory[0]__1                                                            ; work         ;
+;       |altsyncram_2rd1:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g24_possibility_table|altsyncram:table_memory[0]__1|altsyncram_2rd1:auto_generated                             ; work         ;
+;          |altsyncram_4eh1:altsyncram1| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g24_possibility_table|altsyncram:table_memory[0]__1|altsyncram_2rd1:auto_generated|altsyncram_4eh1:altsyncram1 ; work         ;
 ;    |color_counter:color_counter0|      ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g24_possibility_table|color_counter:color_counter0                                                             ; work         ;
 ;    |color_counter:color_counter1|      ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g24_possibility_table|color_counter:color_counter1                                                             ; work         ;
 ;    |color_counter:color_counter2|      ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g24_possibility_table|color_counter:color_counter2                                                             ; work         ;
@@ -241,8 +241,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+------+------+
 ; Name                                                                                                ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
 +-----------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+------+------+
-; altsyncram:table_memory_rtl_0|altsyncram_2rd1:auto_generated|altsyncram_4eh1:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port ; 4096         ; 1            ; 4096         ; 1            ; 4096 ; None ;
+; altsyncram:table_memory[0]__1|altsyncram_2rd1:auto_generated|altsyncram_4eh1:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port ; 4096         ; 1            ; 4096         ; 1            ; 4096 ; None ;
 +-----------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+------+------+
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; last_reached                                       ; GND                 ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -250,28 +261,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 13    ;
+; Total registers                              ; 12    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 13    ;
+; Number of registers using Asynchronous Clear ; 12    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 12    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------+
-; Registers Packed Into Inferred Megafunctions      ;
-+-----------------------+--------------------+------+
-; Register Name         ; Megafunction       ; Type ;
-+-----------------------+--------------------+------+
-; TM_OUT~reg0           ; table_memory_rtl_0 ; RAM  ;
-; table_memory[0..4095] ; table_memory_rtl_0 ; RAM  ;
-+-----------------------+--------------------+------+
-
-
 +-------------------------------------------------------------------------------------+
-; Source assignments for altsyncram:table_memory_rtl_0|altsyncram_2rd1:auto_generated ;
+; Source assignments for altsyncram:table_memory[0]__1|altsyncram_2rd1:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------+
 ; Assignment                      ; Value              ; From ; To                    ;
 +---------------------------------+--------------------+------+-----------------------+
@@ -280,7 +281,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-----------------------------------------------------------------------------------------------------------------+
-; Source assignments for altsyncram:table_memory_rtl_0|altsyncram_2rd1:auto_generated|altsyncram_4eh1:altsyncram1 ;
+; Source assignments for altsyncram:table_memory[0]__1|altsyncram_2rd1:auto_generated|altsyncram_4eh1:altsyncram1 ;
 +---------------------------------+--------------------+------+---------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                ;
 +---------------------------------+--------------------+------+---------------------------------------------------+
@@ -288,64 +289,64 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+--------------------+------+---------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: altsyncram:table_memory_rtl_0 ;
-+------------------------------------+----------------------+--------------------+
-; Parameter Name                     ; Value                ; Type               ;
-+------------------------------------+----------------------+--------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped            ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY         ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY       ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE       ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE     ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped            ;
-; OPERATION_MODE                     ; DUAL_PORT            ; Untyped            ;
-; WIDTH_A                            ; 1                    ; Untyped            ;
-; WIDTHAD_A                          ; 12                   ; Untyped            ;
-; NUMWORDS_A                         ; 4096                 ; Untyped            ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped            ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped            ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped            ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped            ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped            ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped            ;
-; WIDTH_B                            ; 1                    ; Untyped            ;
-; WIDTHAD_B                          ; 12                   ; Untyped            ;
-; NUMWORDS_B                         ; 4096                 ; Untyped            ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped            ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped            ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped            ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped            ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped            ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped            ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped            ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped            ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped            ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped            ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped            ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped            ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Untyped            ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped            ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped            ;
-; BYTE_SIZE                          ; 8                    ; Untyped            ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped            ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped            ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped            ;
-; INIT_FILE                          ; UNUSED               ; Untyped            ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped            ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped            ;
-; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped            ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped            ;
-; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped            ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped            ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped            ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped            ;
-; ENABLE_ECC                         ; FALSE                ; Untyped            ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped            ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped            ;
-; DEVICE_FAMILY                      ; Cyclone II           ; Untyped            ;
-; CBXI_PARAMETER                     ; altsyncram_2rd1      ; Untyped            ;
-+------------------------------------+----------------------+--------------------+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: altsyncram:table_memory[0]__1 ;
++------------------------------------+----------------------+----------------+
+; Parameter Name                     ; Value                ; Type           ;
++------------------------------------+----------------------+----------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped        ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY   ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped        ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped        ;
+; WIDTH_A                            ; 1                    ; Untyped        ;
+; WIDTHAD_A                          ; 12                   ; Untyped        ;
+; NUMWORDS_A                         ; 4096                 ; Untyped        ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped        ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped        ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped        ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped        ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped        ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped        ;
+; WIDTH_B                            ; 1                    ; Untyped        ;
+; WIDTHAD_B                          ; 12                   ; Untyped        ;
+; NUMWORDS_B                         ; 4096                 ; Untyped        ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped        ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped        ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped        ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped        ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped        ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped        ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped        ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped        ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped        ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped        ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped        ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped        ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped        ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped        ;
+; BYTE_SIZE                          ; 8                    ; Untyped        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped        ;
+; INIT_FILE                          ; UNUSED               ; Untyped        ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped        ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped        ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped        ;
+; ENABLE_ECC                         ; FALSE                ; Untyped        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped        ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped        ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_2rd1      ; Untyped        ;
++------------------------------------+----------------------+----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -355,7 +356,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Name                                      ; Value                         ;
 +-------------------------------------------+-------------------------------+
 ; Number of entity instances                ; 1                             ;
-; Entity Instance                           ; altsyncram:table_memory_rtl_0 ;
+; Entity Instance                           ; altsyncram:table_memory[0]__1 ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                     ;
 ;     -- WIDTH_A                            ; 1                             ;
 ;     -- NUMWORDS_A                         ; 4096                          ;
@@ -383,7 +384,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -393,7 +394,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Nov 16 18:11:31 2015
+    Info: Processing started: Sun Nov 29 01:28:39 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off g24_possibility_table -c g24_possibility_table
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file g24_possibility_table.vhd
@@ -403,15 +404,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file color_c
     Info (12022): Found design unit 1: color_counter-behavior
     Info (12023): Found entity 1: color_counter
 Info (12127): Elaborating entity "g24_possibility_table" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at g24_possibility_table.vhd(29): object "LR3" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at g24_possibility_table.vhd(34): object "RS0" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at g24_possibility_table.vhd(35): object "RS1" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at g24_possibility_table.vhd(36): object "RS3" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at g24_possibility_table.vhd(37): object "RS2" assigned a value but never read
-Info (12128): Elaborating entity "color_counter" for hierarchy "color_counter:color_counter0"
-Warning (276027): Inferred dual-clock RAM node "table_memory_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (10631): VHDL Process Statement warning at g24_possibility_table.vhd(117): inferring latch(es) for signal or variable "last_reached", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "last_reached" at g24_possibility_table.vhd(117)
+Warning (276027): Inferred dual-clock RAM node "|altsyncram:table_memory[0]__1" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Info (19000): Inferred 1 megafunctions from design logic
-    Info (276029): Inferred altsyncram megafunction from the following design logic: "table_memory_rtl_0" 
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "|altsyncram:table_memory[0]__1" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
         Info (286033): Parameter WIDTH_A set to 1
         Info (286033): Parameter WIDTHAD_A set to 12
@@ -426,8 +424,10 @@ Info (19000): Inferred 1 megafunctions from design logic
         Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
-Info (12130): Elaborated megafunction instantiation "altsyncram:table_memory_rtl_0"
-Info (12133): Instantiated megafunction "altsyncram:table_memory_rtl_0" with the following parameter:
+Info (12128): Elaborating entity "color_counter" for hierarchy "color_counter:color_counter0"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "altsyncram:table_memory[0]__1"
+Info (12130): Elaborated megafunction instantiation "altsyncram:table_memory[0]__1"
+Info (12133): Instantiated megafunction "altsyncram:table_memory[0]__1" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
     Info (12134): Parameter "WIDTH_A" = "1"
     Info (12134): Parameter "WIDTHAD_A" = "12"
@@ -444,18 +444,20 @@ Info (12133): Instantiated megafunction "altsyncram:table_memory_rtl_0" with the
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2rd1.tdf
     Info (12023): Found entity 1: altsyncram_2rd1
+Info (12128): Elaborating entity "altsyncram_2rd1" for hierarchy "altsyncram:table_memory[0]__1|altsyncram_2rd1:auto_generated"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4eh1.tdf
     Info (12023): Found entity 1: altsyncram_4eh1
+Info (12128): Elaborating entity "altsyncram_4eh1" for hierarchy "altsyncram:table_memory[0]__1|altsyncram_2rd1:auto_generated|altsyncram_4eh1:altsyncram1"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 43 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 42 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 23 logic cells
+    Info (21061): Implemented 22 logic cells
     Info (21064): Implemented 1 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 523 megabytes
-    Info: Processing ended: Mon Nov 16 18:11:38 2015
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 525 megabytes
+    Info: Processing ended: Sun Nov 29 01:28:46 2015
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:03
 

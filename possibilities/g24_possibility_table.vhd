@@ -55,12 +55,9 @@ begin
 	TC(8 downto 6) 	<= TC2;
 	TC(11 downto 9) <= TC3;
 	EN0 			<= Not(last_reached) AND TC_EN;
-	RS0 <= EN1 OR TC_RST;
-	RS1 <= EN2 OR TC_RST;
-	RS2 <= EN3 OR TC_RST;
 	RS3 <= TC_RST;
 
-	TC_LAST			<= last_reached;
+	
 	EN1				<= LR0 AND TC_EN;
 	EN2 			<= LR1 AND TC_EN;
 	EN3 			<= LR2 AND TC_EN;
@@ -92,30 +89,38 @@ begin
 		clock 			=> CLK,
 		reset 			=> TC_RST,
 		enable 			=> EN3,
-		last_reached	=> LR3,
+		--last_reached	=> LR3,
 		next_color		=> TC3
 	);
-	with TC  select
-		last_reached	<= '1' when  "101101101101" ,
-		'0' when others;
+	TC_LAST			<= last_reached;
+
 				
 	-- We need process logic for reading and writing
-	process(TM_EN, TM_IN, TC,TC_RST,CLK)
+	iterate_table: process(TM_EN, TM_IN, CLK)
 	begin
 		
-		--if TC_RST = '0' then TC <= "000000000000";
+		--if TC_RST = '1' then TC <= "000000000000";
 		
 		if rising_edge(CLK) then
 			if TM_EN = '0' then
 				-- Read logic
 				TM_OUT <= table_memory(to_integer(unsigned(TC)));
-				--TM_OUT<=TM_IN;
+
 			else
 				-- Write logic
 				table_memory(to_integer(unsigned(TC))) <= TM_IN;
 			end if;
 		end if;
 			
+	end process;
+	
+	maintain_last:process(TC_RST, TC)
+	begin 
+	if TC_RST = '1' then
+	last_reached <= '0';
+	elsif TC  ="101101101101" then
+		last_reached	<= '1';
+	end if;
 	end process;
 	
 end architecture;
