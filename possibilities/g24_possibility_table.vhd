@@ -54,13 +54,13 @@ begin
 	TC(5 downto 3)	<= TC1;
 	TC(8 downto 6) 	<= TC2;
 	TC(11 downto 9) <= TC3;
-	EN0 			<= Not(last_reached) AND TC_EN;
+	EN0 			<= not(last_reached) and TC_EN;
 	RS3 <= TC_RST;
 
 	
-	EN1				<= LR0 AND TC_EN;
-	EN2 			<= LR1 AND TC_EN;
-	EN3 			<= LR2 AND TC_EN;
+	EN1			<= LR0 AND EN0;
+	EN2 			<= LR1 AND EN1;
+	EN3 			<= LR2 AND EN2;
 	TM_ADDR 		<= TC;
 	
 	-- Declare our needed instances of color counters

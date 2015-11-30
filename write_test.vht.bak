@@ -60,14 +60,14 @@ BEGIN
 	TM_IN 	<='1';
 	TM_EN<='1';
 
-	WAIT For 52000 ns ;
+	WAIT For 50000 ns ;
 	reset<="11";
 	enable<="00";
 	WAIT For 100 ns ;
 	reset<="00";
 	enable<="11";
 	TM_EN<='0';
-	WAIT For 52000 ns ;
+	WAIT For 50000 ns ;
 	reset<="11";
 	enable<="00";
 	WAIT For 100 ns ;
@@ -76,14 +76,14 @@ BEGIN
 	TM_IN 	<='0';
 	TM_EN<='1';
 
-	WAIT For 52000 ns ;
+	WAIT For 50000 ns ;
 	reset<="11";
 	enable<="00";
 	WAIT For 100 ns ;
 	reset<="00";
 	enable<="11";
 	TM_EN<='0';
-	WAIT For 52000 ns ;
+	WAIT For 50000 ns ;
 	WAIT;
 
 	
