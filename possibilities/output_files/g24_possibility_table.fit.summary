@@ -1,16 +1,16 @@
-Fitter Status : Successful - Sun Nov 29 01:28:53 2015
+Fitter Status : Successful - Mon Nov 30 08:12:41 2015
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : g24_possibility_table
 Top-level Entity Name : g24_possibility_table
 Family : Cyclone II
 Device : EP2C20F484C7
 Timing Models : Final
-Total logic elements : 22 / 18,752 ( < 1 % )
-    Total combinational functions : 22 / 18,752 ( < 1 % )
-    Dedicated logic registers : 12 / 18,752 ( < 1 % )
-Total registers : 12
+Total logic elements : 478 / 18,752 ( 3 % )
+    Total combinational functions : 348 / 18,752 ( 2 % )
+    Dedicated logic registers : 354 / 18,752 ( 2 % )
+Total registers : 354
 Total pins : 19 / 315 ( 6 % )
 Total virtual pins : 0
-Total memory bits : 4,096 / 239,616 ( 2 % )
+Total memory bits : 4,608 / 239,616 ( 2 % )
 Embedded Multiplier 9-bit elements : 0 / 52 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )

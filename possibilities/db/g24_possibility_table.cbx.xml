@@ -1,6 +1,5 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="g24_possibility_table">
-		<CBX_INST_ENTRY INSTANCE_NAME="|g24_possibility_table|altsyncram:table_memory[0]__1" CBX_FILE_NAME="altsyncram_2rd1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

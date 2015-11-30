@@ -1,8 +1,5 @@
 |g24_possibility_table
 TC_EN => EN0.IN1
-TC_EN => EN1.IN1
-TC_EN => EN2.IN1
-TC_EN => EN3.IN1
 TC_RST => color_counter:color_counter0.reset
 TC_RST => last_reached.IN1
 TC_RST => color_counter:color_counter1.reset
@@ -4107,8 +4104,8 @@ TM_IN => table_memory.DATAB
 TM_IN => table_memory.DATAB
 TM_IN => table_memory.DATAB
 TM_IN => altsyncram:table_memory[0]__1.data_a[0]
-TM_EN => table_memory[1].ENA
 TM_EN => table_memory[0].ENA
+TM_EN => table_memory[1].ENA
 TM_EN => table_memory[2].ENA
 TM_EN => table_memory[3].ENA
 TM_EN => table_memory[4].ENA

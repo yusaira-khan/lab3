@@ -18,7 +18,6 @@ architecture behavior of g24_possibility_table is
 	-- Declare needed signals
 	signal table_memory : std_logic_vector(4095 downto 0);
 	signal TC 		 	: std_logic_vector(11 downto 0);
-	signal pin_index 	: std_logic_vector(1 downto 0);
 	signal TC0 			: std_logic_vector(2 downto 0);
 	signal LR0 			: std_logic;
 	signal TC1			: std_logic_vector(2 downto 0);
@@ -31,10 +30,6 @@ architecture behavior of g24_possibility_table is
 	signal EN1 			: std_logic;
 	signal EN2 			: std_logic;
 	signal EN3 			: std_logic;
-	signal RS0 			: std_logic;
-	signal RS1 			: std_logic;
-	signal RS3 			: std_logic;
-	signal RS2 			: std_logic;
 	signal last_reached	: std_logic;
 	signal last_reache	: std_logic;
 	
@@ -55,9 +50,6 @@ begin
 	TC(8 downto 6) 	<= TC2;
 	TC(11 downto 9) <= TC3;
 	EN0 			<= not(last_reached) and TC_EN;
-	RS3 <= TC_RST;
-
-	
 	EN1			<= LR0 AND EN0;
 	EN2 			<= LR1 AND EN1;
 	EN3 			<= LR2 AND EN2;
