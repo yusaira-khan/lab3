@@ -40,58 +40,128 @@ R11
 R12
 !s100 z1T]FW`aV:>4E6[AYG>7N0
 !i10b 1
-Eg24_possibility_table
-Z13 w1447715918
-R1
+Eg24_mastermind_controller
+Z13 w1448941981
 R2
 R3
 R4
-Z14 8P:/323/lab3/possibilities/g24_possibility_table.vhd
-Z15 FP:/323/lab3/possibilities/g24_possibility_table.vhd
+Z14 8P:/323/lab4/lab4/mastermind_stuff/g24_mastermind_controller.vhd
+Z15 FP:/323/lab4/lab4/mastermind_stuff/g24_mastermind_controller.vhd
 l0
-L4
-VF9RQ`1<_nf[HGKnfz@iDo0
-!s100 =KoK]6HU5OeahMg?G3f>^1
+L3
+Vm[L]S2SeRUL9EEZVZ;6d83
 R7
 32
-!i10b 1
-Z16 !s108 1447715921.960000
-Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|P:/323/lab3/possibilities/g24_possibility_table.vhd|
-Z18 !s107 P:/323/lab3/possibilities/g24_possibility_table.vhd|
+Z16 !s108 1448942007.525000
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|P:/323/lab4/lab4/mastermind_stuff/g24_mastermind_controller.vhd|
+Z18 !s107 P:/323/lab4/lab4/mastermind_stuff/g24_mastermind_controller.vhd|
 R11
 R12
-Abehavior
-R1
+!s100 <oL]^<J];IcVAT;W69aB^3
+!i10b 1
+Aarch
 R2
 R3
-Z19 DEx4 work 21 g24_possibility_table 0 22 F9RQ`1<_nf[HGKnfz@iDo0
-l49
-L16
-V3TkR37[ioj>dnVF0`f4hH0
-!s100 Nz>aZRb?o1WdSSF<WAmnV1
+DEx4 work 25 g24_mastermind_controller 0 22 m[L]S2SeRUL9EEZVZ;6d83
+l15
+L12
+VN[ghKLS`D:2b@MkhQLNk42
 R7
 32
-!i10b 1
 R16
 R17
 R18
 R11
 R12
-Escan_test
-Z20 w1447711422
+!s100 a`6U9N1hZGH1C5QFQG:2o0
+!i10b 1
+Eg24_mastermind_controller_vhd_tst
+Z19 w1448943145
 R2
 R3
 R4
-Z21 8P:/323/lab3/scan_test/scan_test.vht
-Z22 FP:/323/lab3/scan_test/scan_test.vht
+Z20 8P:\323\lab4\lab4\mastermind_stuff\g24_mastermind_controller.vht
+Z21 FP:\323\lab4\lab4\mastermind_stuff\g24_mastermind_controller.vht
+l0
+L4
+VQ9d00:N0]AVgh0`1FCH@_3
+!s100 E074kj@d8A<X5mTH23^FW3
+R7
+32
+!i10b 1
+Z22 !s108 1448943150.257000
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|P:\323\lab4\lab4\mastermind_stuff\g24_mastermind_controller.vht|
+Z24 !s107 P:\323\lab4\lab4\mastermind_stuff\g24_mastermind_controller.vht|
+R11
+R12
+Ag24_mastermind_controller_arch
+R2
+R3
+Z25 DEx4 work 33 g24_mastermind_controller_vhd_tst 0 22 Q9d00:N0]AVgh0`1FCH@_3
+l45
+L6
+V7bG2?X=of15=PCPOHPQ_Z2
+!s100 m7RThKPf2fGgP@^16IBkj2
+R7
+32
+!i10b 1
+R22
+R23
+R24
+R11
+R12
+Eg24_possibility_table
+Z26 w1447715918
+R1
+R2
+R3
+R4
+Z27 8P:/323/lab3/possibilities/g24_possibility_table.vhd
+Z28 FP:/323/lab3/possibilities/g24_possibility_table.vhd
+l0
+L4
+VF9RQ`1<_nf[HGKnfz@iDo0
+R7
+32
+Z29 !s108 1447715921.960000
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|P:/323/lab3/possibilities/g24_possibility_table.vhd|
+Z31 !s107 P:/323/lab3/possibilities/g24_possibility_table.vhd|
+R11
+R12
+!s100 =KoK]6HU5OeahMg?G3f>^1
+!i10b 1
+Abehavior
+R1
+R2
+R3
+DEx4 work 21 g24_possibility_table 0 22 F9RQ`1<_nf[HGKnfz@iDo0
+l49
+L16
+V3TkR37[ioj>dnVF0`f4hH0
+R7
+32
+R29
+R30
+R31
+R11
+R12
+!s100 Nz>aZRb?o1WdSSF<WAmnV1
+!i10b 1
+Escan_test
+Z32 w1447711422
+R2
+R3
+R4
+Z33 8P:/323/lab3/scan_test/scan_test.vht
+Z34 FP:/323/lab3/scan_test/scan_test.vht
 l0
 L7
 V<kU[ONXg_JN:]UQXjVhLg3
 R7
 32
-Z23 !s108 1447712173.998000
-Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|P:/323/lab3/scan_test/scan_test.vht|
-Z25 !s107 P:/323/lab3/scan_test/scan_test.vht|
+Z35 !s108 1447712173.998000
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|P:/323/lab3/scan_test/scan_test.vht|
+Z37 !s107 P:/323/lab3/scan_test/scan_test.vht|
 R11
 R12
 !s100 zAVM6F4ZH4TmjPZ4Fg=MD2
@@ -105,9 +175,9 @@ L11
 VDd@Ugz4F>HA=62=Gd9BMW1
 R7
 32
-R23
-R24
-R25
+R35
+R36
+R37
 R11
 R12
 !s100 E9lCDhb]Ucm^JU5A]k:Zh1

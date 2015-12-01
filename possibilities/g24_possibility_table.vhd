@@ -94,11 +94,8 @@ begin
 		--if TC_RST = '1' then TC <= "000000000000";
 		
 		if rising_edge(CLK) then
-			if TM_EN = '0' then
-				-- Read logic
-				TM_OUT <= table_memory(to_integer(unsigned(TC)));
-
-			else
+			TM_OUT <= table_memory(to_integer(unsigned(TC)));
+			if TM_EN = '1' then
 				-- Write logic
 				table_memory(to_integer(unsigned(TC))) <= TM_IN;
 			end if;
@@ -108,11 +105,11 @@ begin
 	
 	maintain_last:process(TC_RST, TC)
 	begin 
-	if TC_RST = '1' then
-	last_reached <= '0';
-	elsif TC  ="101101101101" then
-		last_reached	<= '1';
-	end if;
+		if TC_RST = '1' then
+			last_reached <= '0';
+		elsif TC  ="101101101101" then
+			last_reached	<= '1';
+		end if;
 	end process;
 	
 end architecture;
