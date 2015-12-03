@@ -1,5 +1,5 @@
 Flow report for g24_possibility_table
-Wed Dec 02 07:47:08 2015
+Wed Dec 02 14:38:49 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,20 +40,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Flow Status                        ; Successful - Wed Dec 02 07:47:08 2015            ;
+; Flow Status                        ; Successful - Wed Dec 02 14:38:49 2015            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; g24_possibility_table                            ;
 ; Top-level Entity Name              ; g24_possibility_table                            ;
 ; Family                             ; Cyclone II                                       ;
 ; Device                             ; EP2C20F484C8                                     ;
 ; Timing Models                      ; Final                                            ;
-; Total logic elements               ; 483 / 18,752 ( 3 % )                             ;
-;     Total combinational functions  ; 358 / 18,752 ( 2 % )                             ;
-;     Dedicated logic registers      ; 355 / 18,752 ( 2 % )                             ;
-; Total registers                    ; 355                                              ;
+; Total logic elements               ; 672 / 18,752 ( 4 % )                             ;
+;     Total combinational functions  ; 444 / 18,752 ( 2 % )                             ;
+;     Dedicated logic registers      ; 527 / 18,752 ( 3 % )                             ;
+; Total registers                    ; 527                                              ;
 ; Total pins                         ; 19 / 315 ( 6 % )                                 ;
 ; Total virtual pins                 ; 0                                                ;
-; Total memory bits                  ; 4,608 / 239,616 ( 2 % )                          ;
+; Total memory bits                  ; 6,272 / 239,616 ( 3 % )                          ;
 ; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                   ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                                    ;
 +------------------------------------+--------------------------------------------------+
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+-----------------------+
 ; Option            ; Setting               ;
 +-------------------+-----------------------+
-; Start date & time ; 12/02/2015 07:46:24   ;
+; Start date & time ; 12/02/2015 14:38:10   ;
 ; Main task         ; Compilation           ;
 ; Revision Name     ; g24_possibility_table ;
 +-------------------+-----------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+-----------------------------------------------------------------------------------------+---------------+-------------+------------------+
 ; Assignment Name                     ; Value                                                                                   ; Default Value ; Entity Name ; Section Id       ;
 +-------------------------------------+-----------------------------------------------------------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 132129496018681.144906038362284                                                         ; --            ; --          ; --               ;
+; COMPILER_SIGNATURE_ID               ; 132129496028087.144908508911880                                                         ; --            ; --          ; --               ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                                                                    ; --            ; --          ; eda_simulation   ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                                                                  ; <None>        ; --          ; --               ;
 ; ENABLE_SIGNALTAP                    ; On                                                                                      ; --            ; --          ; --               ;
@@ -88,8 +88,6 @@ applicable agreement for further details.
 ; SLD_FILE                            ; P:/323/lab3/possibilities/g24_auto_stripped.stp                                         ; --            ; --          ; --               ;
 ; SLD_NODE_CREATOR_ID                 ; 110                                                                                     ; --            ; --          ; auto_signaltap_0 ;
 ; SLD_NODE_ENTITY_NAME                ; sld_signaltap                                                                           ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_DATA_BITS=4                                                                         ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_BITS=4                                                                      ; --            ; --          ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_INFO=805334528                                                                 ; --            ; --          ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_POWER_UP_TRIGGER=0                                                                  ; --            ; --          ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0                                           ; --            ; --          ; auto_signaltap_0 ;
@@ -99,16 +97,18 @@ applicable agreement for further details.
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STATE_BITS=11                                                                       ; --            ; --          ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_BUFFER_FULL_STOP=1                                                                  ; --            ; --          ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_CURRENT_RESOURCE_WIDTH=1                                                            ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_CRC_LOWORD=23601                                                               ; --            ; --          ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_LEVEL=1                                                                     ; --            ; --          ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_SAMPLE_DEPTH=128                                                                    ; --            ; --          ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_IN_ENABLED=0                                                                ; --            ; --          ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_LEVEL_PIPELINE=1                                                            ; --            ; --          ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK=000000000000000000000                                                ; --            ; --          ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK_LENGTH=21                                                            ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_CRC_HIWORD=10831                                                               ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ADVANCED_TRIGGER_ENTITY=sld_reserved_g24_possibility_table_auto_signaltap_0_1_8a6c, ; --            ; --          ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ENABLE_ADVANCED_TRIGGER=1                                                           ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_DATA_BITS=17                                                                        ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_BITS=17                                                                     ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_CRC_LOWORD=60754                                                               ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_CRC_HIWORD=63419                                                               ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ADVANCED_TRIGGER_ENTITY=sld_reserved_g24_possibility_table_auto_signaltap_0_1_d806, ; --            ; --          ; auto_signaltap_0 ;
 ; USE_SIGNALTAP_FILE                  ; g24.stp                                                                                 ; --            ; --          ; --               ;
 +-------------------------------------+-----------------------------------------------------------------------------------------+---------------+-------------+------------------+
 
@@ -118,12 +118,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 526 MB              ; 00:00:06                           ;
-; Fitter                    ; 00:00:07     ; 1.6                     ; 1071 MB             ; 00:00:05                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 429 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 437 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 395 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:35     ; --                      ; --                  ; 00:00:14                           ;
+; Analysis & Synthesis      ; 00:00:12     ; 1.0                     ; 526 MB              ; 00:00:06                           ;
+; Fitter                    ; 00:00:07     ; 1.6                     ; 1072 MB             ; 00:00:06                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 425 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 442 MB              ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:05     ; 1.0                     ; 390 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:32     ; --                      ; --                  ; 00:00:16                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -132,11 +132,11 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; 156TR4060DS-04   ; Windows 7 ; 6.1        ; x86_64         ;
-; Fitter                    ; 156TR4060DS-04   ; Windows 7 ; 6.1        ; x86_64         ;
-; Assembler                 ; 156TR4060DS-04   ; Windows 7 ; 6.1        ; x86_64         ;
-; TimeQuest Timing Analyzer ; 156TR4060DS-04   ; Windows 7 ; 6.1        ; x86_64         ;
-; EDA Netlist Writer        ; 156TR4060DS-04   ; Windows 7 ; 6.1        ; x86_64         ;
+; Analysis & Synthesis      ; 156TR4060DS-16   ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter                    ; 156TR4060DS-16   ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler                 ; 156TR4060DS-16   ; Windows 7 ; 6.1        ; x86_64         ;
+; TimeQuest Timing Analyzer ; 156TR4060DS-16   ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer        ; 156TR4060DS-16   ; Windows 7 ; 6.1        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
